@@ -1,21 +1,19 @@
 import React from "react";
 import { Form } from "react-bootstrap";
 import CityInput from "./CityInput";
+import Navigation from "./Navigation";
 import NumberInput from "./NumberInput";
 
-function FeatureInput() {
+function HubInput() {
 	return (
-		<div className="featureInput">
+		<div className="hubInput">
 			<Form>
 				<CityInput />
 				<br />
-				<NumberInput title="p1" />
-				<NumberInput title="p2" />
-				<NumberInput title="p3" />
-				<NumberInput title="p4" />
+				<NumberInput title="Hubs" />
 			</Form>
 		</div>
 	);
 }
 
-export default FeatureInput;
+export default HubInput;

@@ -1,9 +1,7 @@
 import React from "react";
-import { Form } from "react-bootstrap";
-import CityInput from "./CityInput";
 import Navigation from "./Navigation";
 import FeatureInput from "./FeatureInput";
-import NumberInput from "./NumberInput";
+import HubInput from "./HubInput";
 
 function SideBar() {
 	return (
@@ -14,21 +12,10 @@ function SideBar() {
 			<div className="inputFields">
 
 				{/* User input: forecast features */}
-				<Form>
-					<CityInput />
-					<br />
-					<NumberInput title="p1" />
-					<NumberInput title="p2" />
-					<NumberInput title="p3" />
-					<NumberInput title="p4" />
-				</Form>
+				<FeatureInput />
 
 				{/* User input: number of hubs */}
-				<Form>
-					<CityInput />
-					<br />
-					<NumberInput title="Hubs" />
-				</Form>
+				<HubInput />
 			</div>
 		</div>
 	);
