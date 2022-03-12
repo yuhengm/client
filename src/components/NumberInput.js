@@ -1,7 +1,7 @@
 import React from 'react'
 import { Form, Col, Row } from 'react-bootstrap';
 
-function NumberInput({title}) {
+function NumberInput({title, numberHandler}) {
   return (
 		<div>
 			<Form.Group as={Row} className="mb-3" controlId="formPlaintext">
@@ -9,7 +9,12 @@ function NumberInput({title}) {
 					{title}
 				</Form.Label>
 				<Col sm="6">
-					<Form.Control type="text" placeholder="Input number" />
+					<Form.Control
+						type="text"
+						placeholder="Input number"
+						autoComplete="off"
+						onChange={(e) => numberHandler(e.target.value)}
+					/>
 				</Col>
 			</Form.Group>
 		</div>

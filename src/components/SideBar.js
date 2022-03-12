@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-import { Form } from 'react-bootstrap'
+import { Form } from "react-bootstrap";
 import Navigation from "./Navigation";
 import FeatureInput from "./FeatureInput";
 import HubInput from "./HubInput";
 
 function SideBar() {
 	// display options
-	const [flag, setFlag] = useState(false);
+	const [flag, setFlag] = useState(true);
 	const handleChange = (e) => {
 		setFlag(!flag);
-	}
+	};
+
+	const [data, setData] = useState({});
 
 	// manage submissions
-	const submitHandler = (e) => {
-		console.log("sumitted");
-	}
+	const submitHandler = (newData) => {
+		setData(newData);
+	};
 
 	return (
 		<div className="sideBar">
@@ -28,7 +30,7 @@ function SideBar() {
 						label="Forecast Features"
 						type="radio"
 						value="feature"
-						checked={flag}
+						checked={!flag}
 						onChange={handleChange}
 					/>
 					<Form.Check
@@ -36,7 +38,7 @@ function SideBar() {
 						label="Hub Number"
 						type="radio"
 						value="hub-number"
-						checked={!flag}
+						checked={flag}
 						onChange={handleChange}
 					/>
 				</div>
@@ -44,9 +46,9 @@ function SideBar() {
 
 			<div className="inputFields">
 				{flag ? (
-					<HubInput onSubmit={submitHandler} />
+					<HubInput submitHandler={submitHandler} />
 				) : (
-					<FeatureInput onSubmit={submitHandler} />
+					<FeatureInput submitHandler={submitHandler} />
 				)}
 			</div>
 		</div>
