@@ -1,7 +1,6 @@
 import React from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import CityInput from "./CityInput";
-import Navigation from "./Navigation";
 import NumberInput from "./NumberInput";
 
 function HubInput() {
@@ -10,8 +9,13 @@ function HubInput() {
 			<Form>
 				<CityInput />
 				<br />
-				<NumberInput title="Hubs" />
+				<NumberInput title="Number of hubs" />
 			</Form>
+			<div className="btn">
+				<Button type="submit" variant="dark">
+					Submit
+				</Button>
+			</div>
 		</div>
 	);
 }

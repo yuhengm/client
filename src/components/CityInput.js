@@ -14,8 +14,6 @@ function CityInput() {
 				<option value="Delta">Delta</option>
 				<option value="Victoria">Victoria</option>
 				<option value="Abbotsford">Abbotsford</option>
-				<option value="Kamloops">Kamloops</option>
-				<option value="Burnaby">Burnaby</option>
 			</Form.Select>
 		</div>
 	);
