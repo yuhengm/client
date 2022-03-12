@@ -11,11 +11,10 @@ function SideBar() {
 		setFlag(!flag);
 	};
 
-	const [data, setData] = useState({});
-
 	// manage submissions
 	const submitHandler = (newData) => {
-		setData(newData);
+		console.log(newData);
+		// api calls
 	};
 
 	return (
