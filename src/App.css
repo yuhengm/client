@@ -1,8 +1,7 @@
 .App {
   display: flex;
-  margin: 10px 10px;
 }
 
 .sideBar {
-  width: 400px;
+  width: 30vw;
 }
