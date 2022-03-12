@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
+// if (process.env.NODE_ENV !== "production") {
+// require("dotenv").config();
+// }
 
 const Map = (props) => {
   const [center, setCenter] = useState({ lat: 49.15, lng: -122.8 });
