@@ -5,7 +5,7 @@ import Marker from "./Marker";
 // require("dotenv").config();
 // }
 
-const Map = (props) => {
+const Map = ({coordinates}) => {
   const [center, setCenter] = useState({ lat: 49.15, lng: -122.8 });
   const [zoom, setZoom] = useState(10);
   return (

@@ -4,15 +4,16 @@ import SideBar from "./components/SideBar";
 import Map from "./components/Map";
 
 function App() {
-  const [coordinate, setCoordinate] = useState({});
-  const coordHandler = (coord) => {
-    console.log(coord);
+  const [coordinates, setCoordinates] = useState([]);
+  const coordHandler = (coords) => {
+    setCoordinates(coords);
+    console.log(coords);
   }
 
   return (
 		<div className="App">
 			<SideBar coordHandler={coordHandler} />
-			<Map coordinate={coordinate} />
+			<Map coordinates={coordinates} />
 		</div>
   );
 }
