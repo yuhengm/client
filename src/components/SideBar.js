@@ -4,7 +4,7 @@ import Navigation from "./Navigation";
 import FeatureInput from "./FeatureInput";
 import HubInput from "./HubInput";
 
-function SideBar() {
+function SideBar({ coordHandler }) {
 	// display options
 	const [flag, setFlag] = useState(true);
 	const handleChange = (e) => {
@@ -14,7 +14,9 @@ function SideBar() {
 	// manage submissions
 	const submitHandler = (newData) => {
 		console.log(newData);
-		// api calls
+		// post request with JSON
+		// obtain response
+		// coordHandler
 	};
 
 	return (
