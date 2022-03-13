@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import GoogleMapReact from "google-map-react";
 import Marker from "./Marker";
-// if (process.env.NODE_ENV !== "production") {
-// require("dotenv").config();
-// }
+import { partners } from "./partners";
 
-const Map = ({coordinates}) => {
+const Map = ({ coordinates }) => {
   const [center, setCenter] = useState({ lat: 49.15, lng: -122.8 });
   const [zoom, setZoom] = useState(10);
   return (
@@ -15,7 +13,9 @@ const Map = ({coordinates}) => {
         defaultCenter={center}
         defaultZoom={zoom}
       >
-        <Marker lat={49.15} lng={-122.8} name="My Marker" color="blue" />
+        {partners.map(function (p) {
+          return <Marker lat={p[1]} lng={p[0]} name="My Marker" color="blue" />;
+        })}
       </GoogleMapReact>
     </div>
   );
