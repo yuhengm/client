@@ -16,6 +16,9 @@ const Map = ({ coordinates }) => {
         {partners.map(function (p) {
           return <Marker lat={p[1]} lng={p[0]} name="My Marker" color="blue" />;
         })}
+        {coordinates.map(function (p) {
+          return <Marker lat={p[1]} lng={p[0]} name="My Marker" color="red" />;
+        })}
       </GoogleMapReact>
     </div>
   );

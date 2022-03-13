@@ -7,21 +7,21 @@
 }
 
 .pin {
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50% 50% 50% 0;
   background: #00cae9;
   position: absolute;
   transform: rotate(-45deg);
   left: 50%;
   top: 50%;
-  margin: -14px 0 0 -15px;
+  margin: -7px 0 0 -13px;
 }
 .pin:after {
   content: "";
-  width: 10px;
-  height: 10px;
-  margin: 5px 0 0 5px;
+  width: 7px;
+  height: 7px;
+  margin: 3px 0 0 3px;
   background: #e6e6e6;
   position: absolute;
   border-radius: 50%;
@@ -82,4 +82,3 @@
   display: block;
   margin: 0 auto;
 }
-
