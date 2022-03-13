@@ -30,22 +30,22 @@
 .pulse {
   background: #d6d4d4;
   border-radius: 50%;
-  height: 14px;
-  width: 14px;
+  height: 7px;
+  width: 7px;
   position: absolute;
   left: 50%;
   top: 50%;
-  margin: 11px 0px 0px -12px;
+  margin: 13px 0px 0px -9px;
   transform: rotateX(55deg);
   z-index: -2;
 }
 .pulse:after {
   content: "";
   border-radius: 50%;
-  height: 40px;
-  width: 40px;
+  height: 20px;
+  width: 20px;
   position: absolute;
-  margin: -13px 0 0 -13px;
+  margin: -8px 0 0 -7px;
   animation: pulsate 1s ease-out;
   animation-iteration-count: infinite;
   opacity: 0;
