@@ -21,11 +21,10 @@ function SideBar({ coordHandler }) {
 		// city + hub number
 		if (flag) {
 			newURL =
-				baseURL + "city=" + newData.city + "&hub=" + newData.hubNum;
+				baseURL + newData.city + "/" + newData.hubNum;
 		} else {
 			newURL =
 				baseURL +
-				"city=" +
 				newData.city +
 				"&population=" +
 				newData.population +
