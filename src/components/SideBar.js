@@ -21,31 +21,27 @@ function SideBar({ coordHandler }) {
 		// city + hub number
 		if (flag) {
 			newURL =
-				baseURL + "hub_number/" + newData.city.toLowerCase() + "/" + newData.hubNum;
+				baseURL +
+				"hub_number/" +
+				newData.city.toLowerCase() +
+				"/" +
+				newData.hubNum;
 		} else {
 			newURL =
-				baseURL + "feature_forecast/" +
+				baseURL +
+				"feature_forecast/" +
 				newData.city.toLowerCase() +
 				"/" +
 				newData.population +
 				"/" +
-				newData.unempolyment;
+				newData.unemployment;
 		}
 		// get request with information
-		fetch(newURL).then(res => res.json()).then(json => {
-			coordHandler(json);
-		});
-		// console.log(newURL);
-
-		// const coords = [
-		// 	[49.2262601, -123.1017867],
-		// 	[49.198466, -122.84495],
-		// 	[49.2033279, -122.9072924],
-		// 	[49.17288, -123.14169],
-		// ];
-
-		// coordHandler()
-
+		fetch(newURL)
+			.then((res) => res.json())
+			.then((json) => {
+				coordHandler(json);
+			});
 	};
 
 	return (
