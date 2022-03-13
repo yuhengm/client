@@ -24,15 +24,14 @@ function SideBar({ coordHandler }) {
 				baseURL + "hub_number/" + newData.city.toLowerCase() + "/" + newData.hubNum;
 		} else {
 			newURL =
-				baseURL + "hub_number/" +
+				baseURL + "feature_forecast/" +
 				newData.city.toLowerCase() +
-				"&population=" +
+				"/" +
 				newData.population +
-				"&unemployment=" +
+				"/" +
 				newData.unempolyment;
 		}
 		// get request with information
-		let coord = [];
 		fetch(newURL).then(res => res.json()).then(json => {
 			coordHandler(json);
 		});
