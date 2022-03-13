@@ -21,30 +21,32 @@ function SideBar({ coordHandler }) {
 		// city + hub number
 		if (flag) {
 			newURL =
-				baseURL + newData.city + "/" + newData.hubNum;
+				baseURL + "hub_number/" + newData.city.toLowerCase() + "/" + newData.hubNum;
 		} else {
 			newURL =
-				baseURL +
-				newData.city +
+				baseURL + "hub_number/" +
+				newData.city.toLowerCase() +
 				"&population=" +
 				newData.population +
 				"&unemployment=" +
 				newData.unempolyment;
 		}
 		// get request with information
-		// let coord = [];
-		// fetch(newURL).then(res => res.json()).then(json => coord = json);
-		console.log(newURL);
+		let coord = [];
+		fetch(newURL).then(res => res.json()).then(json => {
+			coordHandler(json);
+		});
+		// console.log(newURL);
 
-		const coords = [
-			[49.2262601, -123.1017867],
-			[49.198466, -122.84495],
-			[49.2033279, -122.9072924],
-			[49.17288, -123.14169],
-		];
+		// const coords = [
+		// 	[49.2262601, -123.1017867],
+		// 	[49.198466, -122.84495],
+		// 	[49.2033279, -122.9072924],
+		// 	[49.17288, -123.14169],
+		// ];
 
 		// coordHandler()
-		coordHandler(coords);
+
 	};
 
 	return (
