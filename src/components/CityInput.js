@@ -14,14 +14,14 @@ function CityInput({cityHandler}) {
 					}}
 				>
 					<option>Select a city to begin</option>
-					<option value="Vancouver">Vancouver</option>
-					<option value="Surrey">Surrey</option>
-					<option value="New Westminster">New Westminster</option>
-					<option value="Richmond">Richmond</option>
-					<option value="Coquitlam">Coquitlam</option>
-					<option value="Delta">Delta</option>
-					<option value="Victoria">Victoria</option>
-					<option value="Abbotsford">Abbotsford</option>
+					<option value="vancouver">Vancouver</option>
+					<option value="surrey">Surrey</option>
+					<option value="new westminster">New Westminster</option>
+					<option value="richmond">Richmond</option>
+					<option value="coquitlam">Coquitlam</option>
+					<option value="delta">Delta</option>
+					<option value="victoria">Victoria</option>
+					<option value="abbotsford">Abbotsford</option>
 				</Form.Control>
 			</Form.Group>
 		</div>
